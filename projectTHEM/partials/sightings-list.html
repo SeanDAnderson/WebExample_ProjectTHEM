@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<div class="container-fluid">
+        <h2>Creature Sightings</h2>
+        <form class="form-inline">
+            <input type="text" class="form-control" placeholder="Filter Sightings" ng-model="filterText">
+            <button class="btn btn-default" ng-click="resetFilter()">Reset</button>
+        </form>
+        
+        <ul class="list-group" ng-repeat="historyItem in filterHistory">
+            <li class="list-group-item">{{historyItem}}</li>
+        </ul>
+        
+        <div class="panel panel-default" ng-repeat="sighting in sightings | filter:filterText">
+            <div class="panel-heading" ng-click="ngHref='{{hash}}/sightings/{{sighting.id}}'">
+               Sighting # {{sighting.id}}  {{sighting.creature}}
+               <button ng-click="go('sightings/'+sighting.id)">Details</button>
+            </div>
+            
+    </div>
+    </div>
+</html>

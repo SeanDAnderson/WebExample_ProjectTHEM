@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    
+    <div class="panel-heading">
+        Sighting # {{sighting.id}} <br>
+        {{sighting.creature}}
+    </div>
+    <div class="panel-body">
+            Sighted By {{sighting.username}} <br>
+                <strong>Location:</strong> {{sighting.location}} <br>
+                <strong>Evidence of sighting?</strong> {{sighting.evidence}}
+    </div>
+    <a href="#/sightings">Return To List</a>
+</html>
